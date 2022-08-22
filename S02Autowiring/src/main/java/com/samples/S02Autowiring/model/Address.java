@@ -1,7 +1,7 @@
-package com.samples.S01springcoredi;
+package com.samples.S02Autowiring.model;
 
 public class Address {
-	
+
 	private int houseNumber;
 	private String street;
 	private String city;

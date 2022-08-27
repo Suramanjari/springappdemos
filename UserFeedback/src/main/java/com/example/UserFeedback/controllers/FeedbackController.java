@@ -32,7 +32,6 @@ public class FeedbackController {
 		 		+ "	  	\n"
 		 		+ "	</style>\n"
 		 		+ "</head>\n"
-		 		+ "<body style=\"background-color:lightblue;\">\n"
 		 		+ "	<div class=\"center\">\n"
 		 		+ "		<h1>User Feedback Page</h1>\n"
 		 		+ "		\n"

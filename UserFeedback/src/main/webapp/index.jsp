@@ -10,7 +10,6 @@
 	  	
 	</style>
 </head>
-<body style="background-color:lightblue;">
 
 	<div class="center">
 		<h1>User Manager</h1>

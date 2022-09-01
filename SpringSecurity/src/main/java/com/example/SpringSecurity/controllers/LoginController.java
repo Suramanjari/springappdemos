@@ -1,4 +1,4 @@
-package com.example.Authentication.controllers;
+package com.example.SpringSecurity.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Authentication.entities.User;
-import com.example.Authentication.repositories.UserRepository;
+import com.example.SpringSecurity.entities.User;
+import com.example.SpringSecurity.repositories.UserRepository;
 
 
 @RestController
@@ -20,11 +20,18 @@ public class LoginController {
 	
 
 	@GetMapping(value="/")
-    public String showIndexPage1(ModelMap model){   
+    public String showIndexPage(ModelMap model){   
 		 return "<html>\n"
 		 		+ "<head>\n"
+		 		+ "	<style>\n"
+		 		+ "		.center {\n"
+		 		+ "	  		text-align: center;\n"
+		 		+ "	  	}\n"
+		 		+ "	  	\n"
+		 		+ "	</style>\n"
 		 		+ "</head>\n"
-		 		+ "		<h1>User Manager</h1>\n"
+		 		+ "	<div class=\"center\">\n"
+		 		+ "		<h1>User Login Page</h1>\n"
 		 		+ "		\n"
 		 		+ "		<h2 class=\"hello-title\">Welcome</h2>\n"
 		 		+ "		\n"
@@ -42,6 +49,7 @@ public class LoginController {
 		 		+ "</html>";
     }
 
+
     @GetMapping("/login")
     public String showLogin(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password, ModelMap map) {
         User u = new User(name,email,password);
@@ -49,7 +57,15 @@ public class LoginController {
         
         return "<html>\n"
  		+ "<head>\n"
+ 		+ "	<style>\n"
+ 		+ "		.center {\n"
+ 		+ "	  		text-align: center;\n"
+ 		+ "	  	}\n"
+ 		+ "	  	\n"
+ 		+ "	</style>\n"
  		+ "</head>\n"
+ 		+ "	<div class=\"center\">\n"
+ 		+ "		<h1>Logged In</h1>\n"
  		+ "		\n"
  		+ "		<h2 class=\"hello-title\">Successfully Added Your Information</h2>\n"
  		+ "	</div>\n"
@@ -63,13 +79,15 @@ public class LoginController {
         Iterable<User> allUser = userRepository.findAll();
 		return "<html>\n"
 		 		+ "<head>\n"
-		 		+ "<style>\n"
-		 		+ "table, th, td\n"
-		 		+ "border: 1px solid black\n"
-		 		+ "margin: auto\n"
-		 		+ "</style>\r\n"
+		 		+ "	<style>\n"
+		 		+ "		.center {\n"
+		 		+ "	  		text-align: center;\n"
+		 		+ "	  	}\n"
+		 		+ "	  	\n"
+		 		+ "	</style>\n"
 		 		+ "</head>\n"
-		 		+ "<h1>Users</h1>\n"
+		 		+ "	<div class=\"center\">\n"
+		 		+ "<h1>Users Table</h1>\n"
         		+ allUser.toString()
 		        + "	</div>\n"
 		 		+ "</body>\n"

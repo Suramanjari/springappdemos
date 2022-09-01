@@ -30,20 +30,12 @@ public class RestUpdateController
  
         return "<html>\n"
 		 		+ "<head>\n"
-		 		+ "	<style>\n"
-		 		+ "		.center {\n"
-		 		+ "	  		text-align: center;\n"
-		 		+ "	  	}\n"
-		 		+ "	  	\n"
-		 		+ "	</style>\n"
 		 		+ "</head>\n"
-		 		+ "	<div class=\"center\">\n"
 		 		+ "		<h1>User Feedback Page</h1>\n"
 		 		+ "		\n"
 		 		+ "		<h2 class=\"hello-title\">Successfully Added Your Feedback</h2>\n"
 		 		+ "		\n"
 		 		+ "		<a href=\"/feedback\">Click here to view all feedback</a>\n"
-		 		+ "	</div>\n"
 		 		+ "</body>\n"
 		 		+ "</html>";
     }

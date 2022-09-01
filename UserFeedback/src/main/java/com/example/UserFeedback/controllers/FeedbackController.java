@@ -25,14 +25,7 @@ public class FeedbackController {
     public String showIndexPage(ModelMap model){   
 		 return "<html>\n"
 		 		+ "<head>\n"
-		 		+ "	<style>\n"
-		 		+ "		.center {\n"
-		 		+ "	  		text-align: center;\n"
-		 		+ "	  	}\n"
-		 		+ "	  	\n"
-		 		+ "	</style>\n"
 		 		+ "</head>\n"
-		 		+ "	<div class=\"center\">\n"
 		 		+ "		<h1>User Feedback Page</h1>\n"
 		 		+ "		\n"
 		 		+ "		<h2 class=\"hello-title\">View and Send User Feedback</h2>\n"
@@ -46,7 +39,6 @@ public class FeedbackController {
 				+ "			<input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Name Here\" required>	\n"
 				+ "			<input type=\"submit\" value=\"Enter\" />\n"
 				+ "		</form>"
-		 		+ "	</div>\n"
 		 		+ "</body>\n"
 		 		+ "</html>";
     }
@@ -57,18 +49,9 @@ public class FeedbackController {
         Iterable<Feedback> allFB = feedbackRepository.findAll();
 		return "<html>\n"
 		 		+ "<head>\n"
-		 		+ "	<style>\n"
-		 		+ "		.center {\n"
-		 		+ "	  		text-align: center;\n"
-		 		+ "	  	}\n"
-		 		+ "	  	\n"
-		 		+ "	</style>\n"
 		 		+ "</head>\n"
-		 		+ "<body style=\"background-color:lightblue;\">\n"
-		 		+ "	<div class=\"center\">\n"
 		 		+ "<h1>Feedback Table</h1>\n"
         		+ allFB.toString()
-		        + "	</div>\n"
 		 		+ "</body>\n"
 		 		+ "</html>";
     }

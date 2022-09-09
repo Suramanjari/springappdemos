@@ -16,14 +16,14 @@ import com.bean.Result;
 import com.bean.Statistics; 
 import com.bean.Test; 
 import com.bean.User;
-import com.service.AdminSer; 
-import com.service.UserSer;
+import com.service.AdminService; 
+import com.service.UserService;
 
 @RestController 
 @RequestMapping("mcq") 
 public class MainController {
-@Autowired UserSer us; 
-@Autowired AdminSer as;
+@Autowired UserService us; 
+@Autowired AdminService as;
 
 //http://localhost:8080/mcq/userLogin
 @PostMapping(value="userLogin", consumes = MediaType.APPLICATION_JSON_VALUE) 

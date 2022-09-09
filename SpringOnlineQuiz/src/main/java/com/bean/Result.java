@@ -3,6 +3,8 @@ package com.bean;
 
 public class Result implements Comparable<Result>{
  
+private String email;
+private Integer marks;
 //private int resid; private String email; private Integer marks; public Result()
 {
 
@@ -35,6 +37,7 @@ return "Result [email=" + email + ", marks=" + marks + "]";
 }
 @Override
 public int compareTo(Result r) {
+	return marks;
 // TODO Auto-generated method stub int comparemarks= r.getMarks(); return comparemarks-this.marks;
 }
 

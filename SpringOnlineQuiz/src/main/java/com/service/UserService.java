@@ -16,7 +16,7 @@ import com.repository.Testrepo;
 import com.repository.Userrepo;
 
 @Service
-public class UserSer {
+public class UserService {
 
 
 List<Result> finalList=new ArrayList<>(); @Autowired

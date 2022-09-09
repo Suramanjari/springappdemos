@@ -15,7 +15,7 @@ import com.repository.Quizrepo;
 import com.repository.Userrepo;
 
 @Service
-public class AdminSer { 
+public class AdminService { 
 
 @Autowired Questionrepo qr; 
 @Autowired Quizrepo qur; 
